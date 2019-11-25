@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+{% if years %}
+
+    {% for year in years %}
+
+    <tr>
+        <td>{{ year.year }}</td><td><b>{{ year.desc }}</b></td>
+    {% endfor %}
+    </tr>
+    </table>
+        {% else %}
+        <h1>No entries found on the database.</h1>
+
+
+{% endif %}
+<br/>
+<div>
+    <button><a style="text-decoration: none" href="/admin">Add note</a></button>
+</div>
+</body>
+</html>
